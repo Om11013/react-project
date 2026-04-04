@@ -2,7 +2,11 @@ import { Search, Plus } from 'lucide-react';
 
 import { Button } from '@/components/common/Button';
 
-const KnowledgeBaseHeader = () => {
+interface KnowledgeBaseHeaderProps {
+  onCreateClick: () => void;
+}
+
+const KnowledgeBaseHeader = ({ onCreateClick }: KnowledgeBaseHeaderProps) => {
   return (
     <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-6 md:mb-8">
       <h1 className="text-2xl font-semibold text-gray-900">Knowledge Base</h1>
@@ -17,7 +21,10 @@ const KnowledgeBaseHeader = () => {
           />
         </div>
 
-        <Button className="flex items-center justify-center gap-2 bg-primary hover:opacity-90 text-white px-4 py-2 rounded-lg text-sm font-medium w-full sm:w-auto">
+        <Button
+          onClick={onCreateClick}
+          className="flex items-center justify-center gap-2 bg-primary hover:opacity-90 text-white px-4 py-2 rounded-lg text-sm font-medium w-full sm:w-auto"
+        >
           <Plus className="w-4 h-4" />
           <span>Create New</span>
         </Button>

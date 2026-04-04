@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 import KnowledgeBaseHeader from '../components/KnowledgeBaseHeader';
 import KnowledgeBaseCard from '../components/KnowledgeBaseCard';
 import Pagination from '../components/Pagination';
+import CreateKnowledgeBasePanel from '../components/CreateKnowledgeBasePanel';
 
 const KNOWLEDGE_BASE_DATA = Array(6).fill({
   title: 'Test',
@@ -10,9 +13,11 @@ const KNOWLEDGE_BASE_DATA = Array(6).fill({
 });
 
 const KnowledgeBase = () => {
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
+
   return (
     <div className="flex flex-col min-h-full">
-      <KnowledgeBaseHeader />
+      <KnowledgeBaseHeader onCreateClick={() => setIsPanelOpen(true)} />
       <div className="flex-1 flex flex-col border border-gray-200 rounded-2xl p-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 flex-1 content-start">
           {KNOWLEDGE_BASE_DATA.map((item, index) => (
@@ -32,6 +37,11 @@ const KnowledgeBase = () => {
           totalPages={1}
         />
       </div>
+
+      <CreateKnowledgeBasePanel
+        isOpen={isPanelOpen}
+        onClose={() => setIsPanelOpen(false)}
+      />
     </div>
   );
 };
