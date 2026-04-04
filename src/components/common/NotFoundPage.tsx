@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
+import { Button } from '@/components/common/Button';
+
 const NotFoundPage = () => {
   const navigate = useNavigate();
 
@@ -10,12 +12,12 @@ const NotFoundPage = () => {
 
         <p className="text-gray-600">Page not found</p>
 
-        <button
+        <Button
           onClick={() => navigate('/knowledge-base')}
           className="px-4 py-2 rounded-md bg-black text-white"
         >
           Go to Home
-        </button>
+        </Button>
       </div>
     </div>
   );
