@@ -4,7 +4,6 @@ import AventisiaLogo from '../../assets/aventisia_logo.jpeg';
 
 import { Button } from '@/components/common/Button';
 
-
 const Header = () => {
   return (
     <header className="h-[60px] bg-secondary rounded-[15px] flex items-center justify-between px-6 text-white shrink-0">
