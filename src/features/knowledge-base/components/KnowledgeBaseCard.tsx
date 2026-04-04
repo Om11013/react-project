@@ -1,4 +1,5 @@
 import { MoreVertical } from 'lucide-react';
+
 import { Button } from '@/components/common/Button';
 
 interface KnowledgeBaseCardProps {

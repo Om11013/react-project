@@ -1,7 +1,9 @@
 import { Search, Bell, ChevronDown } from 'lucide-react';
-import { Button } from '@/components/common/Button';
 
 import AventisiaLogo from '../../assets/aventisia_logo.jpeg';
+
+import { Button } from '@/components/common/Button';
+
 
 const Header = () => {
   return (
