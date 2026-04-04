@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 import { ROUTES } from '@/constants/routeConstants';
+import { Button } from '@/components/common/Button';
 
 interface SidebarItem {
   name: string;
@@ -85,12 +86,12 @@ const Sidebar = () => {
                 const Icon = item.icon;
 
                 return (
-                  <button
+                  <Button
                     key={item.name}
                     id={`nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                     onClick={() => handleNavItemClick(item.path, item.name)}
                     className={`
-                      relative group flex items-center gap-3.5 px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-200 text-left
+                      relative group flex items-center gap-3.5 px-4 py-2 rounded-lg text-[13px] font-medium text-left justify-start
                       ${
                         isActive
                           ? 'bg-[#EEF2FF] text-[#4F46E5]'
@@ -105,7 +106,7 @@ const Sidebar = () => {
                       className={`w-[18px] h-[18px] stroke-[1.5] ${isActive ? 'text-[#4F46E5]' : 'text-gray-400 group-hover:text-gray-600'}`}
                     />
                     <span className="truncate">{item.name}</span>
-                  </button>
+                  </Button>
                 );
               })}
             </nav>

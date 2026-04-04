@@ -6,6 +6,8 @@ import {
   ChevronDown,
 } from 'lucide-react';
 
+import { Button } from '@/components/common/Button';
+
 interface PaginationProps {
   totalRows: number;
   rowsPerPage: number;
@@ -20,11 +22,13 @@ const Pagination = ({
   totalPages,
 }: PaginationProps) => {
   return (
-    <div className="flex items-center justify-between mt-8 text-sm text-gray-600">
-      <div className="font-medium">{totalRows} rows</div>
+    <div className="flex flex-col md:flex-row items-center justify-between mt-8 text-sm text-gray-600 gap-6">
+      <div className="font-medium text-center w-full md:w-auto">
+        {totalRows} rows
+      </div>
 
-      <div className="flex items-center gap-8">
-        <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 w-full md:w-auto">
+        <div className="flex items-center gap-3 justify-between sm:justify-start w-full sm:w-auto">
           <span className="font-medium">Rows per page</span>
           <div className="relative">
             <select
@@ -44,30 +48,30 @@ const Pagination = ({
         </div>
 
         <div className="flex items-center gap-1.5">
-          <button
-            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors border border-gray-200"
+          <Button
+            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 border border-gray-200"
             disabled={currentPage === 1}
           >
             <ChevronsLeft className="w-4 h-4" />
-          </button>
-          <button
-            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors border border-gray-200"
+          </Button>
+          <Button
+            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 border border-gray-200"
             disabled={currentPage === 1}
           >
             <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button
-            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors border border-gray-200"
+          </Button>
+          <Button
+            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 border border-gray-200"
             disabled={currentPage === totalPages}
           >
             <ChevronRight className="w-4 h-4" />
-          </button>
-          <button
-            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors border border-gray-200"
+          </Button>
+          <Button
+            className="p-1.5 rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600 border border-gray-200"
             disabled={currentPage === totalPages}
           >
             <ChevronsRight className="w-4 h-4" />
-          </button>
+          </Button>
         </div>
       </div>
     </div>
