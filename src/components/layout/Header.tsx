@@ -13,7 +13,10 @@ const Header = ({ onMenuClick }: HeaderProps) => {
   return (
     <header className="h-[60px] bg-secondary md:rounded-[15px] flex items-center justify-between px-4 md:px-6 text-white shrink-0">
       <div className="flex items-center gap-4 md:gap-6">
-        <Button onClick={onMenuClick} className="md:hidden p-2 -ml-2 text-white hover:bg-white/10 rounded-lg">
+        <Button
+          onClick={onMenuClick}
+          className="md:hidden p-2 -ml-2 text-white hover:bg-white/10 rounded-lg"
+        >
           <Menu className="w-5 h-5" />
         </Button>
         <div className="flex items-center gap-2">
