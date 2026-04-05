@@ -6,9 +6,10 @@ import {
   ChevronDown,
 } from 'lucide-react';
 
+import type { PaginationProps } from '../types';
+
 import { Button } from '@/components/common/Button';
 
-import type { PaginationProps } from '../types';
 
 const Pagination = ({
   totalRows,

@@ -1,8 +1,9 @@
 import { MoreVertical } from 'lucide-react';
 
+import type { KnowledgeBaseCardProps } from '../types';
+
 import { Button } from '@/components/common/Button';
 
-import type { KnowledgeBaseCardProps } from '../types';
 
 const KnowledgeBaseCard = ({
   title,

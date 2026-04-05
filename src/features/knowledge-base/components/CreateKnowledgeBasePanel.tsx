@@ -1,10 +1,11 @@
 import { X, ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
+import type { CreateKnowledgeBasePanelProps } from '../types';
+
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 
-import type { CreateKnowledgeBasePanelProps } from '../types';
 
 const CreateKnowledgeBasePanel = ({
   isOpen,

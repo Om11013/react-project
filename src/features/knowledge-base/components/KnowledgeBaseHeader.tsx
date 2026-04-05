@@ -1,9 +1,10 @@
 import { Search, Plus } from 'lucide-react';
 
+import type { KnowledgeBaseHeaderProps } from '../types';
+
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 
-import type { KnowledgeBaseHeaderProps } from '../types';
 
 const KnowledgeBaseHeader = ({ onCreateClick }: KnowledgeBaseHeaderProps) => {
   return (
