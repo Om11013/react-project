@@ -1,10 +1,9 @@
 import { Search, Plus } from 'lucide-react';
 
-import { Button } from '@/components/common/Button';
+import type { KnowledgeBaseHeaderProps } from '../types';
 
-interface KnowledgeBaseHeaderProps {
-  onCreateClick: () => void;
-}
+import { Button } from '@/components/common/Button';
+import { Input } from '@/components/common/Input';
 
 const KnowledgeBaseHeader = ({ onCreateClick }: KnowledgeBaseHeaderProps) => {
   return (
@@ -14,10 +13,10 @@ const KnowledgeBaseHeader = ({ onCreateClick }: KnowledgeBaseHeaderProps) => {
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
         <div className="relative w-full sm:w-auto">
           <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
-          <input
+          <Input
             type="text"
             placeholder="Search..."
-            className="w-full sm:w-[240px] border border-gray-200 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all bg-white"
+            className="w-full sm:w-[240px] pl-9 pr-4 transition-all"
           />
         </div>
 
