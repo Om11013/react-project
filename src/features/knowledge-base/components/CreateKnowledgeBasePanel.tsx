@@ -16,11 +16,8 @@ const CreateKnowledgeBasePanel = ({
   useEffect(() => {
     if (isOpen) {
       setMounted(true);
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          setVisible(true);
-        });
-      });
+      const timer = setTimeout(() => setVisible(true), 50);
+      return () => clearTimeout(timer);
     } else {
       setVisible(false);
       const timeout = setTimeout(() => setMounted(false), 300);

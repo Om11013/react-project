@@ -1,14 +1,24 @@
-import { Search, Bell, ChevronDown } from 'lucide-react';
+import { Search, Bell, ChevronDown, Menu } from 'lucide-react';
 
 import AventisiaLogo from '../../assets/aventisia_logo.jpeg';
 
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 
-const Header = () => {
+interface HeaderProps {
+  onMenuClick?: () => void;
+}
+
+const Header = ({ onMenuClick }: HeaderProps) => {
   return (
-    <header className="h-[60px] bg-secondary rounded-[15px] flex items-center justify-between px-6 text-white shrink-0">
-      <div className="flex items-center gap-6">
+    <header className="h-[60px] bg-secondary md:rounded-[15px] flex items-center justify-between px-4 md:px-6 text-white shrink-0">
+      <div className="flex items-center gap-4 md:gap-6">
+        <Button
+          onClick={onMenuClick}
+          className="md:hidden p-2 -ml-2 text-white hover:bg-white/10 rounded-lg"
+        >
+          <Menu className="w-5 h-5" />
+        </Button>
         <div className="flex items-center gap-2">
           <img
             src={AventisiaLogo}
@@ -18,13 +28,13 @@ const Header = () => {
           <span className="text-xl font-semibold tracking-wide">Worcspace</span>
         </div>
 
-        <Button className="flex items-center gap-2 bg-[#1b2f66] hover:bg-[#38357A] transition-colors rounded-full px-3 py-1.5 text-sm">
+        <Button className="hidden sm:flex items-center gap-2 bg-[#1b2f66] hover:bg-[#38357A] transition-colors rounded-full px-3 py-1.5 text-sm">
           <span>Worcspace 1</span>
           <ChevronDown className="w-4 h-4 text-gray-300" />
         </Button>
       </div>
 
-      <div className="flex-1 max-w-xl mx-8">
+      <div className="flex-1 max-w-xl mx-4 md:mx-8 hidden md:block">
         <div className="relative flex items-center">
           <Search className="w-4 h-4 text-gray-400 absolute left-3" />
           <Input
