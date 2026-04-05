@@ -5,7 +5,6 @@ import type { KnowledgeBaseHeaderProps } from '../types';
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 
-
 const KnowledgeBaseHeader = ({ onCreateClick }: KnowledgeBaseHeaderProps) => {
   return (
     <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-6 md:mb-8">

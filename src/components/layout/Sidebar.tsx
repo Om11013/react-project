@@ -19,17 +19,7 @@ import {
 
 import { ROUTES } from '@/constants/routeConstants';
 import { Button } from '@/components/common/Button';
-
-interface SidebarItem {
-  name: string;
-  icon: React.ElementType;
-  path: string;
-}
-
-interface SidebarSection {
-  title: string;
-  items: SidebarItem[];
-}
+import type { SidebarSection } from '@/types/general';
 
 const Sidebar = () => {
   const navigate = useNavigate();

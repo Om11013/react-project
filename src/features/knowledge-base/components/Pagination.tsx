@@ -10,7 +10,6 @@ import type { PaginationProps } from '../types';
 
 import { Button } from '@/components/common/Button';
 
-
 const Pagination = ({
   totalRows,
   rowsPerPage,

@@ -4,7 +4,6 @@ import type { KnowledgeBaseCardProps } from '../types';
 
 import { Button } from '@/components/common/Button';
 
-
 const KnowledgeBaseCard = ({
   title,
   description,

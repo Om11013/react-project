@@ -2,7 +2,7 @@ import React from 'react';
 
 import { cn } from '../../utils/cn';
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+import type { ButtonProps } from '@/types/general';
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, children, ...props }, ref) => {
     return (
