@@ -58,3 +58,23 @@ A production-grade, highly-responsive frontend React application replicating the
 
 3. **Navigate to Localhost:**
    Open the port generated in your terminal (usually `http://localhost:5173`) to view and interact with the UI.
+
+---
+
+## 🌐 Deployment (Vercel)
+
+The application is deployed on Vercel for quick access and testing:
+
+🔗 Live Demo: https://react-project-one-blush.vercel.app/
+
+### SPA Routing Configuration
+
+Since the application uses client-side routing with React Router, direct navigation to routes (e.g., `/knowledge-base`) can result in a 404 error if not handled correctly.
+
+To address this, a rewrite rule is configured using a `vercel.json` file:
+
+```json
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
+```
