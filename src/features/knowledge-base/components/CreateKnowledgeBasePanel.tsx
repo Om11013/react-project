@@ -35,7 +35,7 @@ const CreateKnowledgeBasePanel = ({
       />
 
       <div
-        className={`fixed inset-y-0 right-0 w-[480px] bg-white shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out z-50 ${visible ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed inset-y-0 right-0 w-full sm:w-[480px] max-w-full bg-white shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out z-50 ${visible ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex flex-col h-full">
           <div className="flex items-start justify-between p-6 border-b border-gray-100">

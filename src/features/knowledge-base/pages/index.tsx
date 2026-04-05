@@ -19,7 +19,7 @@ const KnowledgeBase = () => {
     <div className="flex flex-col min-h-full">
       <KnowledgeBaseHeader onCreateClick={() => setIsPanelOpen(true)} />
       <div className="flex-1 flex flex-col">
-        <div className="border border-gray-200 p-3 rounded-2xl mb-8">
+        <div className="border border-gray-200 p-3 rounded-2xl mb-8 shadow-sm shadow-gray-200">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {KNOWLEDGE_BASE_DATA.map((item, index) => (
               <KnowledgeBaseCard

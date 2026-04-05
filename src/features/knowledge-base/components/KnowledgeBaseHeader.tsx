@@ -16,13 +16,13 @@ const KnowledgeBaseHeader = ({ onCreateClick }: KnowledgeBaseHeaderProps) => {
           <Input
             type="text"
             placeholder="Search..."
-            className="w-full sm:w-[240px] pl-9 pr-4 transition-all"
+            className="w-full sm:w-[240px] pl-9 pr-4 h-10 transition-all"
           />
         </div>
 
         <Button
           onClick={onCreateClick}
-          className="flex items-center justify-center gap-2 bg-primary hover:opacity-90 text-white px-4 py-2 rounded-lg text-sm font-medium w-full sm:w-auto"
+          className="flex items-center justify-center gap-2 bg-primary hover:opacity-90 text-white px-4 h-10 rounded-lg text-sm font-medium w-full sm:w-[150px]"
         >
           <Plus className="w-4 h-4" />
           <span>Create New</span>

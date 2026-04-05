@@ -19,11 +19,9 @@ export default [
       import: importPlugin,
     },
     rules: {
-      // React hooks rules
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
 
-      // Clean imports
       'import/order': [
         'warn',
         {
@@ -39,12 +37,10 @@ export default [
         },
       ],
 
-      // Code quality
       'no-console': 'warn',
-      'no-unused-vars': 'off', // handled by TS
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['warn'],
 
-      // Optional strictness
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
