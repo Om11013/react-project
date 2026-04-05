@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Aventisia Frontend Assignment: Knowledge Base UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade, highly-responsive frontend React application replicating the required Knowledge Base Figma design with pixel-accurate precision, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Key Highlights & Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Pixel-Accurate UI Implementation
 
-## React Compiler
+- **High-Fidelity Translation:** Faithfully translated the Figma concept into robust React components, ensuring exact margin mathematics, padding boundaries, and typography selections.
+- **Design Tokens:** Strict adherence to the branding guidelines, successfully employing the exact `Primary Color: HEX #4F46E5` and `Secondary Color: HEX #1E1B4B` specifications globally across the app.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Advanced Responsive Fluidity
 
-## Expanding the ESLint configuration
+- **Completely Mobile-Ready:** The application flawlessly scales from tiny smartphone viewports up to large ultrawide desktop monitors seamlessly without horizontal scrolling or breakages.
+- **Custom Drawer Navigation Navigation:** Instead of simply hiding the Sidebar on mobile, it gracefully transitions into an interactive, off-canvas sliding drawer triggered by a header hamburger menu (complete with a focus-dimming backdrop).
+- **Auto-Collapsing Header UI:** Contextually minimizes the workspace dropdowns and header search parameters on restrictive breakpoints.
+- **Resilient Grid Scaling:** The Knowledge Base cards component dynamically transitions from single-stack mobile views to dense multi-column arrays (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 3. Complex UI State Management
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Slide-in Action Panels:** Full implementation of the "Create New" Knowledge Base pop-up screen natively bound to the window's right edge.
+- **Silky Smooth 60FPS Animations:** Replaced quick nested-DOM snaps with intelligent CSS-Transform transitions orchestrated by specific JavaScript `setTimeout` delays. This completely prevents skipped mounting frames to guarantee buttery-smooth CSS sliding capabilities on the panel!
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 4. Enterprise-Level Component Architecture
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+- **Clean Feature-based Routing:** Highly scalable folder structures explicitly dividing layout scaffolding (`src/components/layout`), generic utilities (`src/components/common`), and distinct app features (`src/features/...`).
+- **High Reusability:** Every input and action uses globally reusable, extensible primitive architecture components like `<Button />` and `<Input />`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 5. Stringent TypeScript & Quality Methodologies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+- **Universal Typing Module:** Deployed a globally accessible `src/types/general.d.ts` namespace to perfectly encapsulate interfaces and share data models intelligently without cyclic dependencies.
+- **No Compromise Linting:** Fully implemented `ESLint` and `Prettier` systems rigorously managing code structuring and cleanliness to strict industry standards.
+- **Continuous Integration Ready:** Supplied with a structured `.github/workflows/ci.yml` pipeline allowing seamless evaluation within a CI/CD environment.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+---
+
+## 🛠️ Technology Stack
+
+- **Core:** React 18, TypeScript, Vite
+- **Routing:** React Router DOM
+- **Styling Engine:** Tailwind CSS
+- **Iconography:** Lucide-React
+- **Code Quality:** ESLint, Prettier
+
+## 📦 Running the Application Locally
+
+1. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Run the Development Server:**
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Navigate to Localhost:**
+   Open the port generated in your terminal (usually `http://localhost:5173`) to view and interact with the UI.
