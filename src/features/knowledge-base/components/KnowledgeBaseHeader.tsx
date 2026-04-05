@@ -3,9 +3,7 @@ import { Search, Plus } from 'lucide-react';
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 
-interface KnowledgeBaseHeaderProps {
-  onCreateClick: () => void;
-}
+import type { KnowledgeBaseHeaderProps } from '../types';
 
 const KnowledgeBaseHeader = ({ onCreateClick }: KnowledgeBaseHeaderProps) => {
   return (

@@ -2,11 +2,7 @@ import { MoreVertical } from 'lucide-react';
 
 import { Button } from '@/components/common/Button';
 
-interface KnowledgeBaseCardProps {
-  title: string;
-  description: string;
-  date: string;
-}
+import type { KnowledgeBaseCardProps } from '../types';
 
 const KnowledgeBaseCard = ({
   title,

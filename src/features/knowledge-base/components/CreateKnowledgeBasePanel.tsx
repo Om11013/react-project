@@ -4,10 +4,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 
-interface CreateKnowledgeBasePanelProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import type { CreateKnowledgeBasePanelProps } from '../types';
 
 const CreateKnowledgeBasePanel = ({
   isOpen,

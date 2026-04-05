@@ -5,7 +5,7 @@ import KnowledgeBaseCard from '../components/KnowledgeBaseCard';
 import Pagination from '../components/Pagination';
 import CreateKnowledgeBasePanel from '../components/CreateKnowledgeBasePanel';
 
-const KNOWLEDGE_BASE_DATA = Array(6).fill({
+export const KNOWLEDGE_BASE_DATA = Array(6).fill({
   title: 'Test',
   description:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",

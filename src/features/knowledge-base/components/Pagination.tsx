@@ -8,12 +8,7 @@ import {
 
 import { Button } from '@/components/common/Button';
 
-interface PaginationProps {
-  totalRows: number;
-  rowsPerPage: number;
-  currentPage: number;
-  totalPages: number;
-}
+import type { PaginationProps } from '../types';
 
 const Pagination = ({
   totalRows,
