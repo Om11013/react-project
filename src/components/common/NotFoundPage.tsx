@@ -14,7 +14,7 @@ const NotFoundPage = () => {
 
         <Button
           onClick={() => navigate('/knowledge-base')}
-          className="px-4 py-2 rounded-md bg-black text-white"
+          className="px-4 py-2 rounded-md bg-secondary hover:bg-primary text-white"
         >
           Go to Home
         </Button>

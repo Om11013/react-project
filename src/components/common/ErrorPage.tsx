@@ -17,14 +17,14 @@ const ErrorPage = () => {
         <div className="flex justify-center gap-3">
           <Button
             onClick={() => window.location.reload()}
-            className="px-4 py-2 rounded-md bg-black text-white"
+            className="px-4 py-2 rounded-md bg-secondary hover:bg-primary text-white"
           >
             Refresh
           </Button>
 
           <Button
             onClick={() => navigate('/knowledge-base')}
-            className="px-4 py-2 bg-black text-white rounded-md border"
+            className="px-4 py-2 bg-secondary hover:bg-primary text-white rounded-md border"
           >
             Go to Home
           </Button>
