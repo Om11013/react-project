@@ -42,7 +42,7 @@ const Header = ({ onMenuClick }: HeaderProps) => {
             placeholder="Search..."
             className="w-full bg-[#2D2A68] border-transparent focus:border-primary rounded-md pl-10 pr-12 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none transition-colors"
           />
-          <span className="absolute right-3 text-xs text-gray-400 bg-[#1E1B4B] px-1.5 py-0.5 rounded border border-gray-600">
+          <span className="absolute right-3 text-xs text-gray-400 bg-[#1E1B4B] px-1.5 py-0.5 rounded">
             ⌘K
           </span>
         </div>
